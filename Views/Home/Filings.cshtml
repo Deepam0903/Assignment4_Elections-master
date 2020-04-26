@@ -1,0 +1,35 @@
+﻿@model Assignment4_Elections.Models.Filings
+
+@{
+    ViewData["Title"] = "Filings";
+}
+
+
+<h3 class="page-header">Filings</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>File Number</th>
+            <th>Committee Id</th>
+            <th>Last Updated</th>
+            <th>Document Descprition</th>
+            <th>Report Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.results)
+        {
+
+        <tr>
+
+            <td>@Html.DisplayFor(modelItem => item.ending_image_number)</td>
+            <td>@Html.DisplayFor(modelItem => item.committee_id)</td>
+            <td>@Html.DisplayFor(modelItem => item.update_date)</td>
+            <td>@Html.DisplayFor(modelItem => item.document_description)</td>
+            <td>@Html.DisplayFor(modelItem => item.report_year)</td>
+        </tr>
+
+        }
+    </tbody>
+</table>

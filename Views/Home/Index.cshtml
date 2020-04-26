@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="page-header">Elections Filings</h3>
+
+<div>
+
+	<div class="">
+		<p>
+			Our group have chosen to work with API provided by the fec.gov. The FEC is an independent government agency, created by Congress in 1974. It provides a vast array of data on the elected officials and those who are running for the office. We have focused on getting the data about Candidates, Committees and Filings using fec.gov API. This live web application fetches data and stores in the SQL database. It's using the API to build table views demonstrating the concept of using Controller to pull data and send it to the view.
+		</p>
+
+		<p>
+			The FEC was created to promote confidence and participation in the democratic process. This institution provides access to its vast database to the public via API (as long as individuals sign up for the API key). However, it's not the only way to receive information from the fec.gov because there's plenty of very user-friendly charts and data tables that provide transparency into the government elections. In general, the web-site and API allow users to explore the way candidates and committees fund their campaigns.
+		</p>
+
+		<p>
+			For instance, we've gathered info on the top 10 fund rasining candidates running for the presidential office in 2008 and 2016 (to races without incumbent in the office). Summary is provided in the charts below. It's interesting to note that Democrats seem to gather more money during their campaigns but there's more Republicans than Democrats in the Top 10. This is just one of the examples of how important data visualization can be. 
+		</p>
+
+		<div class="alert alert-info">
+			<strong>Raising summary by the numbers: </strong><br>
+			Charts below show the top 10 presidential candidates in the 2016 race by the total amount of money raised during their respective campaigns, and the comparison between Democratic and Republican party.
+		</div>
+
+		
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Top 10 fundraisers (Presidential Race 2016) </h3>
+			</div>
+			
+
+			<div class="panel-body" style="height: 500px">
+				<canvas id="horizontalBarChart" style="width: 100%; height: 100%"></canvas>
+
+			</div>
+			<br>
+			<br>
+			<div class="panel-body" style="height: 500px">
+				<canvas id="donutChart" style="width: 100%; height: 100%"></canvas>
+			</div>
+			<p class="source-credit">
+				<a href="https://www.fec.gov/data/raising-bythenumbers/?election_year=2016" target="_blank">Source: www.fec.gov</a>
+			</p>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Top 10 fundraisers (Presidential Race 2008) </h3>
+			</div>
+
+			<div class="panel-body" style="height: 500px">
+				<canvas id="horizontalBarChart2008" style="width: 100%; height: 100%"></canvas>
+
+			</div>
+			<br>
+			<br>
+			<div class="panel-body" style="height: 500px">
+				<canvas id="donutChart2008" style="width: 100%; height: 100%"></canvas>
+			</div>
+			<p class="source-credit">
+				<a href="https://www.fec.gov/data/raising-bythenumbers/?election_year=2008" target="_blank">Source: www.fec.gov</a>
+			</p>
+		</div>
+	</div>
+
+</div>

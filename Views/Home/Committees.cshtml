@@ -1,0 +1,38 @@
+﻿@model Assignment4_Elections.Models.Committees
+
+@{
+    ViewData["Title"] = "Committees";
+}
+
+<h3 class="page-header">Committees</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Committee Id</th>
+            <th>Committee type</th>
+            <th>Candidate Id</th>
+            <th>Party</th>
+            <th>State</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.results)
+        {
+
+            <tr>
+
+                <td>@Html.DisplayFor(modelItem => item.name)</td>
+                <td>@Html.DisplayFor(modelItem => item.committee_id)</td>
+                <td>@Html.DisplayFor(modelItem => item.committee_type_full)</td>
+                <td>@Html.DisplayFor(modelItem =>  item.candidate_ids)</td>
+                <td>@Html.DisplayFor(modelItem => item.party_full)</td>
+                <td>@Html.DisplayFor(modelItem => item.state)</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
